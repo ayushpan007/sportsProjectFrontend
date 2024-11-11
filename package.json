@@ -3,13 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "staging": "vite build --mode staging",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "staging": "vite build --mode staging",
+  "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+  "preview": "vite preview",
+  "predeploy": "npm run lint && npm run build",
+  "deploy": "npm run preview"
+},
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
